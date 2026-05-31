@@ -146,7 +146,7 @@ Create a file named `cypress.env.json` in the root of the project:
 ```
 
 > [!IMPORTANT]
-> Replace `YOUR_PRICELABS_ACCOUNT_EMAIL` and `YOUR_PRICELABS_ACCOUNT_PASSWORD` with your active PriceLabs credentials.
+> Replace `YOUR_PRICELABS_ACCOUNT_EMAIL` ,'/baseurl' and `YOUR_PRICELABS_ACCOUNT_PASSWORD` with your active PriceLabs credentials.
 
 ---
 
