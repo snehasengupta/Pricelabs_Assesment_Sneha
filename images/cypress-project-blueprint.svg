@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="900" viewBox="0 0 980 900" role="img" aria-labelledby="ti de">
+  <title id="ti">Pricelabs assessment — Cypress framework architecture</title>
+  <desc id="de">A blueprint of the Cypress test project grouped by responsibility: test specs, test data, selectors, page objects, support commands, auto-generated output, and project root config files.</desc>
+  <style>
+    .ff{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+    .mono{font-family:'SF Mono','Courier New',monospace}
+    .eyebrow{font-size:12px;letter-spacing:2.4px;fill:#5aa0f0}
+    .title{font-size:26px;font-weight:600;fill:#e7e9ee}
+    .seclabel{font-size:12px;letter-spacing:1.6px;fill:#969db0;font-weight:700}
+    .seclabel .mono{fill:#cdd2de}
+    .fname{font-size:14px;font-weight:700;fill:#e7e9ee}
+    .pill{font-size:11px;font-weight:700;letter-spacing:.4px}
+    .file{font-size:12px;fill:#d7dbe6}
+    .purpose{font-size:12px;fill:#868e9f}
+    .sub{font-size:11px;fill:#7b8294}
+    .foot{font-size:12.5px;fill:#7b8294}
+    .foot b{fill:#b6bccb;font-weight:600}
+    .foot .ar{fill:#5aa0f0;font-weight:700}
+  </style>
+
+  <rect x="0" y="0" width="980" height="900" fill="#0f1115"/>
+
+  <!-- Title -->
+  <text class="mono eyebrow" x="40" y="44">CYPRESS · TEST AUTOMATION FRAMEWORK</text>
+  <text class="ff title" x="40" y="80">Pricelabs_Assessment_Sneha — project blueprint</text>
+
+  <!-- Section: inside cypress/ -->
+  <text class="ff seclabel" x="40" y="124">INSIDE <tspan class="mono">cypress/</tspan> — SEPARATION OF CONCERNS (PAGE OBJECT MODEL)</text>
+
+  <!-- ============ ROW 1 ============ -->
+
+  <!-- e2e/ : Test Specs (coral) -->
+  <rect x="40" y="140" width="440" height="186" rx="14" fill="#161922" stroke="#2a2f3a"/>
+  <rect x="62" y="156" width="12" height="12" rx="3" fill="#f08a5d"/>
+  <text class="mono fname" x="82" y="167">e2e/</text>
+  <rect x="336" y="150" width="124" height="22" rx="7" fill="rgba(240,138,93,0.14)"/>
+  <text class="mono pill" x="398" y="161" text-anchor="middle" dominant-baseline="central" fill="#f08a5d">TEST SPECS</text>
+  <line x1="62" y1="184" x2="458" y2="184" stroke="#f08a5d" stroke-opacity="0.3"/>
+  <text class="mono sub" x="64" y="206" dominant-baseline="central" fill="#f08a5d">▸ multicalendar/</text>
+  <text x="80" y="228" dominant-baseline="central"><tspan class="mono file">dso-api-ui-integration.cy.js</tspan><tspan class="ff purpose"> — API + UI grid checks</tspan></text>
+  <text x="80" y="250" dominant-baseline="central"><tspan class="mono file">dso-functional.cy.js</tspan><tspan class="ff purpose"> — Single / Bulk DSO changes</tspan></text>
+  <text x="80" y="272" dominant-baseline="central"><tspan class="mono file">dso-negative.cy.js</tspan><tspan class="ff purpose"> — Validation &amp; error checks</tspan></text>
+  <text x="64" y="294" dominant-baseline="central"><tspan class="mono file">DSOE2E.cy.js</tspan><tspan class="ff purpose"> — Full E2E price-calc flow</tspan></text>
+  <text x="64" y="314" dominant-baseline="central"><tspan class="mono file">login-verify.cy.js</tspan><tspan class="ff purpose"> — Auth: valid / invalid creds</tspan></text>
+
+  <!-- fixtures/ : Test Data (amber) -->
+  <rect x="500" y="140" width="440" height="186" rx="14" fill="#161922" stroke="#2a2f3a"/>
+  <rect x="522" y="156" width="12" height="12" rx="3" fill="#f0b24a"/>
+  <text class="mono fname" x="542" y="167">fixtures/</text>
+  <rect x="796" y="150" width="124" height="22" rx="7" fill="rgba(240,178,74,0.14)"/>
+  <text class="mono pill" x="858" y="161" text-anchor="middle" dominant-baseline="central" fill="#f0b24a">TEST DATA</text>
+  <line x1="522" y1="184" x2="918" y2="184" stroke="#f0b24a" stroke-opacity="0.3"/>
+  <text x="524" y="208" dominant-baseline="central"><tspan class="mono file">addCustomPricing.json</tspan><tspan class="ff purpose"> — API injection payload</tspan></text>
+  <text x="524" y="232" dominant-baseline="central"><tspan class="mono file">filtered_listings.json</tspan><tspan class="ff purpose"> — Filtered search results</tspan></text>
+  <text x="524" y="256" dominant-baseline="central"><tspan class="mono file">listings.json</tspan><tspan class="ff purpose"> — Runtime listings dump</tspan></text>
+  <text x="524" y="280" dominant-baseline="central"><tspan class="mono file">users.json</tspan><tspan class="ff purpose"> — Env creds &amp; bad logins</tspan></text>
+  <text x="524" y="304" dominant-baseline="central"><tspan class="mono file">dsopanel.json</tspan><tspan class="ff purpose"> — DSO form pricing inputs</tspan></text>
+
+  <!-- ============ ROW 2 ============ -->
+
+  <!-- locators/ : Selectors (blue) -->
+  <rect x="40" y="344" width="440" height="140" rx="14" fill="#161922" stroke="#2a2f3a"/>
+  <rect x="62" y="360" width="12" height="12" rx="3" fill="#5aa0f0"/>
+  <text class="mono fname" x="82" y="371">locators/</text>
+  <rect x="336" y="354" width="124" height="22" rx="7" fill="rgba(90,160,240,0.14)"/>
+  <text class="mono pill" x="398" y="365" text-anchor="middle" dominant-baseline="central" fill="#5aa0f0">SELECTORS</text>
+  <line x1="62" y1="388" x2="458" y2="388" stroke="#5aa0f0" stroke-opacity="0.3"/>
+  <text x="64" y="412" dominant-baseline="central"><tspan class="mono file">DSO/DSOPanelLocators.js</tspan><tspan class="ff purpose"> — DSO modal elements</tspan></text>
+  <text x="64" y="436" dominant-baseline="central"><tspan class="mono file">LoginLocators.js</tspan><tspan class="ff purpose"> — Sign-in page elements</tspan></text>
+  <text x="64" y="460" dominant-baseline="central"><tspan class="mono file">MulticalendarLocators.js</tspan><tspan class="ff purpose"> — Grid, tooltips, filters</tspan></text>
+
+  <!-- pages/ : Page Objects (teal) -->
+  <rect x="500" y="344" width="440" height="140" rx="14" fill="#161922" stroke="#2a2f3a"/>
+  <rect x="522" y="360" width="12" height="12" rx="3" fill="#3fc9a3"/>
+  <text class="mono fname" x="542" y="371">pages/</text>
+  <rect x="796" y="354" width="124" height="22" rx="7" fill="rgba(63,201,163,0.14)"/>
+  <text class="mono pill" x="858" y="365" text-anchor="middle" dominant-baseline="central" fill="#3fc9a3">PAGE OBJECTS</text>
+  <line x1="522" y1="388" x2="918" y2="388" stroke="#3fc9a3" stroke-opacity="0.3"/>
+  <text x="524" y="408" dominant-baseline="central"><tspan class="mono file">DSO/DSOPanel.js</tspan><tspan class="ff purpose"> — Add / update overrides</tspan></text>
+  <text x="524" y="430" dominant-baseline="central"><tspan class="mono file">BasePage.js</tspan><tspan class="ff purpose"> — Visiting, URL checks</tspan></text>
+  <text x="524" y="452" dominant-baseline="central"><tspan class="mono file">LoginPage.js</tspan><tspan class="ff purpose"> — Inputs, submit, errors</tspan></text>
+  <text x="524" y="474" dominant-baseline="central"><tspan class="mono file">MulticalendarPage.js</tspan><tspan class="ff purpose"> — Search, scroll, select</tspan></text>
+
+  <!-- ============ ROW 3 ============ -->
+
+  <!-- support/ : Commands & Hooks (purple) -->
+  <rect x="40" y="502" width="440" height="160" rx="14" fill="#161922" stroke="#2a2f3a"/>
+  <rect x="62" y="518" width="12" height="12" rx="3" fill="#9d8bf0"/>
+  <text class="mono fname" x="82" y="529">support/</text>
+  <rect x="324" y="512" width="136" height="22" rx="7" fill="rgba(157,139,240,0.14)"/>
+  <text class="mono pill" x="392" y="523" text-anchor="middle" dominant-baseline="central" fill="#9d8bf0">COMMANDS · HOOKS</text>
+  <line x1="62" y1="546" x2="458" y2="546" stroke="#9d8bf0" stroke-opacity="0.3"/>
+  <text x="64" y="570" dominant-baseline="central"><tspan class="mono file">api/ApiClient.js</tspan><tspan class="ff purpose"> — cy.request() wrapper</tspan></text>
+  <text x="64" y="592" dominant-baseline="central"><tspan class="mono file">commands/auth.commands.js</tspan><tspan class="ff purpose"> — login, logout</tspan></text>
+  <text x="64" y="614" dominant-baseline="central"><tspan class="mono file">commands/network.commands.js</tspan><tspan class="ff purpose"> — intercepts</tspan></text>
+  <text x="64" y="636" dominant-baseline="central"><tspan class="mono file">e2e.js</tspan><tspan class="ff purpose"> — Setup hooks, mocha, reports</tspan></text>
+  <text x="64" y="656" dominant-baseline="central"><tspan class="mono file">index.d.ts</tspan><tspan class="ff purpose"> — TS IntelliSense for commands</tspan></text>
+
+  <!-- reports/ + screenshots/ : Auto-generated (gray) -->
+  <rect x="500" y="502" width="440" height="160" rx="14" fill="#13161d" stroke="#252a33"/>
+  <rect x="522" y="518" width="12" height="12" rx="3" fill="#6c7282"/>
+  <text class="mono fname" x="542" y="529" fill="#b6bccb">reports/ · screenshots/</text>
+  <rect x="788" y="512" width="132" height="22" rx="7" fill="rgba(108,114,130,0.16)"/>
+  <text class="mono pill" x="854" y="523" text-anchor="middle" dominant-baseline="central" fill="#969db0">AUTO-GENERATED</text>
+  <line x1="522" y1="546" x2="918" y2="546" stroke="#6c7282" stroke-opacity="0.35"/>
+  <text x="524" y="572" dominant-baseline="central"><tspan class="mono file">reports/</tspan><tspan class="ff purpose"> — Mochawesome HTML reports</tspan></text>
+  <text x="524" y="596" dominant-baseline="central"><tspan class="mono file">screenshots/</tspan><tspan class="ff purpose"> — On-failure screenshots</tspan></text>
+  <text class="ff sub" x="524" y="628" dominant-baseline="central" fill="#5f6573">Both folders are git-ignored build output —</text>
+  <text class="ff sub" x="524" y="646" dominant-baseline="central" fill="#5f6573">created automatically on each test run.</text>
+
+  <!-- Section: project root files -->
+  <text class="ff seclabel" x="40" y="700">PROJECT ROOT FILES</text>
+
+  <!-- Root config card (gray, full width, 2 columns) -->
+  <rect x="40" y="714" width="900" height="120" rx="14" fill="#161922" stroke="#2a2f3a"/>
+  <rect x="62" y="730" width="12" height="12" rx="3" fill="#8a92a3"/>
+  <text class="mono fname" x="82" y="741">/</text>
+  <rect x="816" y="724" width="104" height="22" rx="7" fill="rgba(138,146,163,0.16)"/>
+  <text class="mono pill" x="868" y="735" text-anchor="middle" dominant-baseline="central" fill="#a7adba">CONFIG</text>
+  <line x1="62" y1="758" x2="918" y2="758" stroke="#8a92a3" stroke-opacity="0.3"/>
+  <text x="64" y="784" dominant-baseline="central"><tspan class="mono file">cypress.config.js</tspan><tspan class="ff purpose"> — Timeouts, viewports, reporting</tspan></text>
+  <text x="64" y="810" dominant-baseline="central"><tspan class="mono file">cypress.env.json</tspan><tspan class="ff purpose"> — Local credentials (git-ignored)</tspan></text>
+  <text x="500" y="784" dominant-baseline="central"><tspan class="mono file">package.json</tspan><tspan class="ff purpose"> — Dependencies, scripts, plugins</tspan></text>
+  <text x="500" y="810" dominant-baseline="central"><tspan class="mono file">README.md</tspan><tspan class="ff purpose"> — Framework documentation</tspan></text>
+
+  <!-- Footer: how it flows -->
+  <text class="ff foot" x="40" y="872">Flow:  <tspan class="b">spec</tspan> <tspan class="ar">→</tspan> <tspan class="b">page object</tspan> <tspan class="ar">→</tspan> <tspan class="b">locator</tspan>     ·     fixtures supply the data     ·     support adds custom commands &amp; hooks</text>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "validUser": {
+    "description": "Credentials sourced from Cypress.env() at runtime — never hardcoded here",
+    "usernameEnvKey": "username",
+    "passwordEnvKey": "password"
+  },
+  "invalidUser": {
+    "email": "invalid_user@example.com",
+    "password": "WrongPassword123!"
+  }
+}

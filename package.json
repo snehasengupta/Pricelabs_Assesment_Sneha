@@ -1,0 +1,21 @@
+{
+  "name": "pricelabs-cypress-qa",
+  "version": "1.0.0",
+  "description": "Cypress QA automation framework for PriceLabs Multicalendar DSO feature",
+  "author": "Sneha Sengupta",
+  "license": "MIT",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:headed": "cypress run --headed",
+    "cy:run:login": "cypress run --spec cypress/e2e/login-verify.cy.js --headed",
+    "cy:run:dso-functional": "cypress run --spec cypress/e2e/multicalendar/dso-functional.cy.js --headed",
+    "cy:run:dso-integration": "cypress run --spec cypress/e2e/multicalendar/dso-api-ui-integration.cy.js --headed",
+    "cy:run:e2eflow": "cypress run --spec cypress/e2e/DSOE2E.cy.js --headed",
+    "cy:run:dso-negative": "cypress run --spec cypress/e2e/multicalendar/dso-negative.cy.js --headed"
+  },
+  "devDependencies": {
+    "cypress": "^13.13.0",
+    "cypress-mochawesome-reporter": "^4.0.2"
+  }
+}

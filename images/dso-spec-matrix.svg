@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="650" viewBox="0 0 960 650" role="img" aria-labelledby="t d">
+  <title id="t">DSO Cypress test suite — structured matrix</title>
+  <desc id="d">A table of five Cypress spec files for the Dynamic Stay Override module with nine numbered test scenarios grouped and color-coded by spec.</desc>
+  <style>
+    .ff{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+    .mono{font-family:'SF Mono','Courier New',monospace}
+    .eyebrow{font-size:12px;letter-spacing:2.4px;fill:#5aa0f0}
+    .title{font-size:27px;font-weight:600;fill:#e7e9ee}
+    .title em{fill:#3fc9a3;font-style:italic}
+    .head{font-size:11px;letter-spacing:1.4px;fill:#969db0;font-weight:700}
+    .spec{font-size:13px;font-weight:700;fill:#e7e9ee}
+    .num{font-size:12px;fill:#6c7282}
+    .badge{font-size:11px;font-weight:700}
+    .sc{font-size:13px;fill:#cdd2de}
+    .sc .em{fill:#ffffff;font-weight:600}
+    .sc .code{fill:#f0b24a}
+    .foot{font-size:13px;fill:#6c7282}
+    .foot b{fill:#969db0;font-weight:600}
+  </style>
+
+  <rect x="0" y="0" width="960" height="650" fill="#0f1115"/>
+
+  <!-- Header text -->
+  <text class="mono eyebrow" x="40" y="44">CYPRESS · DSO MODULE</text>
+  <text class="ff title" x="40" y="82">Dynamic Stay Override — <tspan class="em" font-style="italic" fill="#3fc9a3">test matrix</tspan></text>
+
+  <!-- Table container -->
+  <rect x="30" y="110" width="900" height="476" rx="16" fill="#161922" stroke="#2a2f3a" stroke-width="1"/>
+  <!-- header band -->
+  <path d="M30 126a16 16 0 0 1 16-16h868a16 16 0 0 1 16 16v34H30z" fill="#1c2029"/>
+  <line x1="30" y1="160" x2="930" y2="160" stroke="#2a2f3a" stroke-width="1"/>
+
+  <!-- header labels -->
+  <text class="mono head" x="58"  y="140">SPEC FILE</text>
+  <text class="mono head" x="320" y="140">SPEC TYPE</text>
+  <text class="mono head" x="498" y="140" text-anchor="middle">#</text>
+  <text class="mono head" x="540" y="140">COVERED SCENARIO</text>
+
+  <!-- accent bars (group color) -->
+  <rect x="30" y="160" width="4" height="88" fill="#5aa0f0"/>
+  <rect x="30" y="248" width="4" height="88" fill="#3fc9a3"/>
+  <rect x="30" y="336" width="4" height="60" fill="#f0b24a"/>
+  <rect x="30" y="396" width="4" height="60" fill="#9d8bf0"/>
+  <rect x="30" y="456" width="4" height="120" fill="#f08a5d"/>
+
+  <!-- group divider lines (stronger) -->
+  <line x1="30" y1="248" x2="930" y2="248" stroke="#2a2f3a" stroke-width="1"/>
+  <line x1="30" y1="336" x2="930" y2="336" stroke="#2a2f3a" stroke-width="1"/>
+  <line x1="30" y1="396" x2="930" y2="396" stroke="#2a2f3a" stroke-width="1"/>
+  <line x1="30" y1="456" x2="930" y2="456" stroke="#2a2f3a" stroke-width="1"/>
+  <!-- within-group dividers (soft) -->
+  <line x1="58" y1="204" x2="900" y2="204" stroke="#21262f" stroke-width="1"/>
+  <line x1="58" y1="292" x2="900" y2="292" stroke="#21262f" stroke-width="1"/>
+  <line x1="58" y1="516" x2="900" y2="516" stroke="#21262f" stroke-width="1"/>
+
+  <!-- ===== GROUP A: login-verify (blue) ===== -->
+  <text class="mono spec" x="50" y="204" dominant-baseline="central">login-verify.cy.js</text>
+  <rect x="320" y="192" width="132" height="24" rx="7" fill="rgba(90,160,240,0.14)"/>
+  <text class="mono badge" x="386" y="204" text-anchor="middle" dominant-baseline="central" fill="#5aa0f0">UI · Pos &amp; Neg</text>
+  <text class="mono num" x="498" y="182" text-anchor="middle" dominant-baseline="central">1.1</text>
+  <text class="ff sc"  x="540" y="182" dominant-baseline="central">Valid login verification.</text>
+  <text class="mono num" x="498" y="226" text-anchor="middle" dominant-baseline="central">1.2</text>
+  <text class="ff sc"  x="540" y="226" dominant-baseline="central">Login failure with invalid email or password.</text>
+
+  <!-- ===== GROUP B: dso-functional (teal) ===== -->
+  <text class="mono spec" x="50" y="292" dominant-baseline="central">dso-functional.cy.js</text>
+  <rect x="320" y="280" width="132" height="24" rx="7" fill="rgba(63,201,163,0.14)"/>
+  <text class="mono badge" x="386" y="292" text-anchor="middle" dominant-baseline="central" fill="#3fc9a3">UI Functional</text>
+  <text class="mono num" x="498" y="270" text-anchor="middle" dominant-baseline="central">2.1</text>
+  <text class="ff sc"  x="540" y="270" dominant-baseline="central"><tspan class="em">Single date</tspan> — DSO price and stay override.</text>
+  <text class="mono num" x="498" y="314" text-anchor="middle" dominant-baseline="central">2.2</text>
+  <text class="ff sc"  x="540" y="314" dominant-baseline="central"><tspan class="em">Bulk dates</tspan> — DSO price and stay override.</text>
+
+  <!-- ===== GROUP C: dso-negative (amber) ===== -->
+  <text class="mono spec" x="50" y="366" dominant-baseline="central">dso-negative.cy.js</text>
+  <rect x="320" y="354" width="132" height="24" rx="7" fill="rgba(240,178,74,0.14)"/>
+  <text class="mono badge" x="386" y="366" text-anchor="middle" dominant-baseline="central" fill="#f0b24a">UI Validation</text>
+  <text class="mono num" x="498" y="366" text-anchor="middle" dominant-baseline="central">3.1</text>
+  <text class="ff sc"  x="540" y="358" dominant-baseline="central">Validation for non-numeric custom pricing input.</text>
+  <text class="ff sc"  x="540" y="378" dominant-baseline="central"><tspan class="code">"Percentage custom pricing needs to be a number"</tspan></text>
+
+  <!-- ===== GROUP D: api-ui-integration (purple) ===== -->
+  <text class="mono spec" x="50" y="426" dominant-baseline="central">dso-api-ui-integration.cy.js</text>
+  <rect x="320" y="414" width="132" height="24" rx="7" fill="rgba(157,139,240,0.14)"/>
+  <text class="mono badge" x="386" y="426" text-anchor="middle" dominant-baseline="central" fill="#9d8bf0">Hybrid API &amp; UI</text>
+  <text class="mono num" x="498" y="426" text-anchor="middle" dominant-baseline="central">4.1</text>
+  <text class="ff sc"  x="540" y="418" dominant-baseline="central">Saves custom pricing via backend REST API <tspan class="em">POST</tspan>,</text>
+  <text class="ff sc"  x="540" y="438" dominant-baseline="central">then loads Multicalendar UI grid to verify changes.</text>
+
+  <!-- ===== GROUP E: DSOE2E (coral) ===== -->
+  <text class="mono spec" x="50" y="516" dominant-baseline="central">DSOE2E.cy.js</text>
+  <rect x="320" y="504" width="132" height="24" rx="7" fill="rgba(240,138,93,0.14)"/>
+  <text class="mono badge" x="386" y="516" text-anchor="middle" dominant-baseline="central" fill="#f08a5d">End-to-End</text>
+  <text class="mono num" x="498" y="486" text-anchor="middle" dominant-baseline="central">5.1</text>
+  <text class="ff sc"  x="540" y="478" dominant-baseline="central"><tspan class="em">Single Day E2E:</tspan> inputs price/stay, saves, opens</text>
+  <text class="ff sc"  x="540" y="498" dominant-baseline="central">panel; asserts summary equals hover Final price.</text>
+  <text class="mono num" x="498" y="546" text-anchor="middle" dominant-baseline="central">5.2</text>
+  <text class="ff sc"  x="540" y="538" dominant-baseline="central"><tspan class="em">Bulk Dates E2E:</tspan> bulk inputs price/stay, saves,</text>
+  <text class="ff sc"  x="540" y="558" dominant-baseline="central">opens panel; asserts summary equals Final price.</text>
+
+  <!-- footer -->
+  <text class="ff foot" x="40" y="614"><tspan class="em" fill="#969db0" font-weight="600">5</tspan> spec files  ·  <tspan class="em" fill="#969db0" font-weight="600">9</tspan> scenarios  ·  layers: UI, API, full E2E</text>
+</svg>
